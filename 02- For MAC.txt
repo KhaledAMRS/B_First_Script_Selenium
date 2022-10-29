@@ -1,0 +1,73 @@
+There's no big difference between Windows and MAC, you will follow same steps except one simple thing about System.setProperty
+try one of the following Methods to handle System.setProperty
+
+
+Method 1 
+
+1- You will download chrome driver as usual and save it inside any folder
+
+2- to get the full path of chrome driver you need to right click on it and select "Get info" then "Where"
+
+3- Copy this path and don't forget to write the driver name from "Name & Exetension"
+ move it as it's inside System.setProperty in your code 
+
+example: 
+System.setProperty("webdriver.chrome.driver","/Users/khaled/Downloads/chromedriver");
+
+4- Open Finder > System Preferences > Security & Privacy > Under General 
+you should click on the lock button at the bottom left "Click the lock to make changes"
+
+after that
+click on "Allow Anyway" beside this message
+"chromedriver" was blocked from use because it is not from an identified  developer.
+
+
+
+Notes: 
+* you don't have to write machine name before /Users
+* chromedriver without .exe (unlike Windows)
+* don't forget to write small and captial letters as it's 
+* slashes is /  (unlike Windows \\)
+
+Reference
+https://www.youtube.com/watch?v=b4GEjUjWFB4&ab_channel=Simplilearn
+min 18:45
+
+
+
+
+
+
+
+
+
+==============================================================================================================================
+
+
+
+
+Method 2
+
+1- In MAC, go to this directory /usr/local/
+
+2- Check if there's a folder called 'bin' inside or not 
+if not created, you could easily create this 'bin' folder
+
+3- you have to copy your drivers in /usr/local/bin
+
+4- in your code, you don't have to use System.setProperty unlike Windows
+
+
+so your code will be like this 
+
+ public static void main(String[] args) throws InterruptedException {
+	
+	// No need to use System.setProperty if you're using MAC
+
+ WebDriver driver=new ChromeDriver();
+ 
+ driver.manage().window().maximize();
+
+ driver.get("https://google.com/");
+
+}

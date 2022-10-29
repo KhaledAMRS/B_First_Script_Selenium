@@ -1,0 +1,27 @@
+Chrome:
+System.setProperty("webdriver.chrome.driver", your driver path in String);
+https://chromedriver.chromium.org/downloads
+
+Firefox:
+System.setProperty("webdriver.gecko.driver", your driver path in String);
+https://github.com/mozilla/geckodriver/releases
+
+Edge:
+System.setProperty("webdriver.edge.driver", your driver path in String);
+https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads
+
+Opera:
+System.setProperty("webdriver.opera.driver", your driver path in String);
+https://github.com/operasoftware/operachromiumdriver/releases
+
+internet explorer
+System.setProperty("webdriver.ie.driver", your driver path in String);
+https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration
+
+=================================================================
+
+to get the required website for any driver, you need to
+1- go to this website
+https://www.selenium.dev/downloads/
+2- scroll down to this part "Platforms Supported by Selenium"
+    and click on + button beside "Browsers"
